@@ -59,7 +59,7 @@ curl -H "Content-Type: application/json" -X POST -d '{"age": 22, "income": 27000
 
 #### GET example
 
-Having an id, you can GET the application by using the /loanapp/<specialid> route. Here's an example:
+Having an id, you can GET the application by using the /loanapp/specialid route. Here's an example:
 
 ```
 curl http://localhost:5000/loanapp/592e8baecf1a4804851e0c82
@@ -76,7 +76,7 @@ does not have the correct types or keys is considered invalid.
 }
 ```
 
-If you wish to update an age of an applicant in the database, you can send a PATCH to the /loanapp/<specialid> route. Here's an example:
+If you wish to update an age of an applicant in the database, you can send a PATCH to the /loanapp/specialid route. Here's an example:
 
 ```
 curl -H "Content-Type: application/json" -X PATCH -d '{"age": 23}' http://localhost:5000/loanapp/592e8baecf1a4804851e0c82
@@ -86,7 +86,7 @@ The API will return a JSON response telling you if the PATCH was successful.
 
 #### DELETE example
 
-Finally, to remove an application from the database, just send a DELETE to the /loanapp/<specialid> route. Here's an example:
+Finally, to remove an application from the database, just send a DELETE to the /loanapp/specialid route. Here's an example:
 
 ```
 curl -X DELETE http://localhost:5000/loanapp/592e8baecf1a4804851e0c82
